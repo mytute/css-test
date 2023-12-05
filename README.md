@@ -1,6 +1,6 @@
 # Create a 12-Column Grid
 
-Here we create custom 12 grid sytem that like have on bootstrap.   
+Here we create custom 12 grid system with simple layout.   
 
 1. add following tags for the "content" in html page. and add following css code to create 12*n grid system.      
 
