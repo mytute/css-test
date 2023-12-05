@@ -24,7 +24,7 @@ If the grid box is the same size as the content, then no changes will be apparen
 
 ```css
 .one{
-    align-self: start;
-    justify-self: center;
+    align-self: start; /* start,end,center default: stretch */
+    justify-self: center; /* start,end,center default: stretch */
 }
 ```
