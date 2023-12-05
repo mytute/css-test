@@ -1,41 +1,29 @@
-# Grid Lines
+# Nested Grids
 
-here we are going to position our element inside grid layout.    
+here we see how to nest grid in another.    
 
-
-1. first make 6*4 gird using "grid-template-columns" and "grid-template-row".   
+1. change 4th div's class to "nested" and inside it add 4 "p" tags. And show how to make 2*2 grid inside 4th div.  add padding, border and remove default margin of p tag for better watch the result.   
 
 ```css
-#content{
-    /* ... */
+.nested {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, minmax(150px, auto));
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px
+}
+.nested p {
+    border: 1px solid #fff;
+    padding: 20px;
+    margin: 0;
 }
 ```
+2. show how to expand to full with of grid for "nested" element by using "span" keyword.     
 
-2. set first("one") element in position in 6*4 gird layout that we created before using "grid-column-start" and "grid-row-end".  
-
-```css
-.one{
-   grid-column-start:1;
-   grid-column-end:3;
-}
-```
-
-
-3. show how to combine "grid-column-start" and "grid-row-end" with "gird-column".
-```css
-.one{
-   grid-column: 2/3;
-}
-```
-
-4. show how to change elements default order using "grid-column" and "grid-row".
-
-```css
-.six{
-    grid-column: 1/2;
-    grid-row: 1/2;
+when we using span tag because of it's start from 1, we can use 3 instead of 4 to get same result.
+```css 
+.nested {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px;
+    grid-column: span 3; /*grid-column: 1/4;*/
 }
 ```
