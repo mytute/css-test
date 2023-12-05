@@ -2,6 +2,7 @@
 
 here we see how to aling item inside element when it is in grid container.   
 
+If the grid box is the same size as the content, then no changes will be apparent after applying the following properties, especially in terms of height. 
 
 1. show how to align items for all items inside container by using "align-items" and "justify-items".      
 
