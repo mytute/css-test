@@ -1,29 +1,29 @@
-# Nested Grids
+# Aligning and Justifying Items
 
-here we see how to nest grid in another.    
+here we see how to aling item inside element when it is in grid container.   
 
-1. change 4th div's class to "nested" and inside it add 4 "p" tags. And show how to make 2*2 grid inside 4th div.  add padding, border and remove default margin of p tag for better watch the result.   
 
-```css
-.nested {
+1. show how to align items for all items inside container by using "align-items" and "justify-items".      
+
+```css 
+#content{
+    max-width: 960px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap:10px
-}
-.nested p {
-    border: 1px solid #fff;
-    padding: 20px;
-    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:10px;
+
+    align-items: end; /* start,end, default: stretch */
+    justify-items: left; /* start,end, default: stretch */
+
 }
 ```
-2. show how to expand to full with of grid for "nested" element by using "span" keyword.     
 
-when we using span tag because of it's start from 1, we can use 3 instead of 4 to get same result.
-```css 
-.nested {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap:10px;
-    grid-column: span 3; /*grid-column: 1/4;*/
+1. show how to align items by single(individual) element by using "align-self" and "justify-self".  
+
+```css
+.one{
+    align-self: start;
+    justify-self: center;
 }
 ```
