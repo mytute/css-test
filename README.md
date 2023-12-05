@@ -58,6 +58,7 @@ why not flex box :
 
 2. for start convert 'content' to grid add 'display:gid' and see nothing changed.   
 
+
 4. using 'grid-template-column: 33.3% 33.3% 33.3%;' for add equal size 3 column to one row.   
 * row can have only 3 column because of we are define 3 with and it will repeat to other elements too.    
 ```css 
