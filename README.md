@@ -1,55 +1,72 @@
-# Create a Mosaic Layout
+# Grid Areas
 
-Mosaic is an Art using small pieces to create patterns or images.    
+here we are define element position using "grid-template-areas".    
 
-1. add following html   
 
-```html  
+1. add following html tag to html file.    
+
+```html
 <div id="content">
-    <div class="one">1</div>
-    <div class="two">2</div>
-    <div class="three">3</div>
-    <div class="four">4</div>
-    <div class="five">5</div>
+
+    <header>Header</header>
+    <main>Main</main>
+    <section>Section</section>
+    <aside>Aside</aside>
+    <nav>Nav</nav>
+    <footer>Footer</footer>
+    
 </div>
-```   
+```    
 
-2.  add following grid inorder to create Mosaic Layout.   
+2. add following css to convert above html to grid.  
 
-```scss  
-    #content{
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-auto-rows: minmax(150px, auto);
-        grid-gap: 10px;
-        max-width: 960px;
-        margin: 0 auto;
-    }
-    #content div{
-        background: #333;
-        padding: 30px;
-    }
-    .one{
-        grid-column: 1 / 3;
-        grid-row: 1 / 5;
-    }
-    .two{
-        grid-column: 3 / 7;
-        grid-row: 1 / 3;
-    }
-    .three{
-        grid-column: 3 / 5;
-        grid-row:  3 / 5;
-    }
-    .four{
-        grid-column: 5 / 7;
-        grid-row: 3 / 7;
-    }
-    .five{
-        grid-column: 1 / 5;
-        grid-row: 5 / 7;
-    }
-    #content{
-        /*transform: rotateZ(45deg) scale(0.7);*/
-    }
+```css 
+#content{
+    max-width: 960px;
+    margin: 0 auto;
+
+    display: grid; /* add here */ 
+    grid-template-columns: repeat(4,1fr); /* add here */ 
+    grid-auto-rows: minmax(100px, auto); /* add here */ 
+}
+```
+
+3. show how to assign "grid-area" property with it's unique name.    
+```css 
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+aside{
+    grid-area: aside;
+}
+nav{
+    grid-area: nav;
+}
+section{
+    grid-area: section;
+}
+footer{
+    grid-area: myGridArea;
+}
+```
+
+
+4. then show how to add "grid-template-areas" property with each line as a row with assign name of "grid-area".   
+
+here you can use "." symbol to add blank element.   
+
+```css
+#content{
+    /* ... */
+    grid-gap:10px;
+    grid-template-areas: 
+    "header header header header"
+    "aside . main main"
+    "nav nav main main"
+    "section section section section"
+    "myGridArea myGridArea myGridArea myGridArea"
+}
 ```
