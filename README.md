@@ -1,41 +1,73 @@
-# Grid Lines
+# center in parent.
 
 here we are going to position our element inside grid layout.    
 
 
-1. first make 6*4 gird using "grid-template-columns" and "grid-template-row".   
+1. using flexbox.   
 
 ```css
-#content{
+.parent{
+    /* ... */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+```
+
+2. using grid.   
+
+```css
+.parent{
     /* ... */
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, minmax(150px, auto));
+    place-content:center;
 }
 ```
 
-2. set first("one") element in position in 6*4 gird layout that we created before using "grid-column-start" and "grid-row-end".  
+3. using position.   
 
 ```css
-.one{
-   grid-column-start:1;
-   grid-column-end:3;
+.parent{
+    /* ... */
+    position:relative;
+}
+
+.child{
+    /* ... */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 ```
 
+4. using flexbox and margin.   
 
-3. show how to combine "grid-column-start" and "grid-row-end" with "gird-column".
 ```css
-.one{
-   grid-column: 2/3;
+.parent{
+    /* ... */
+    display:flex;
+}
+
+.child{
+    /* ... */
+    margin:auto
 }
 ```
 
-4. show how to change elements default order using "grid-column" and "grid-row".
+5. using grid and margin.   
 
 ```css
-.six{
-    grid-column: 1/2;
-    grid-row: 1/2;
+.parent{
+    /* ... */
+    display:grid;
+}
+
+.child{
+    /* ... */
+    margin:auto
 }
 ```
+
+
+

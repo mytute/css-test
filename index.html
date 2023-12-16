@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Using CSS Grid</title>
+	<title>center child inside parent</title>
 	<style>
 		body{
 			color: #fff;
 			font-family: 'Nunito Semibold';
 			text-align: center;
 		}
-		#content{
-			max-width: 960px;
-			margin: 0 auto;
+		.parent{
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+
+			display: flex;
 
 		}
-		#content div{
-			background: #3bbced;
-			padding: 30px;
+		.child{
+			width: 30px;
+			height: 30px;
+			background-color: #3bbced;
+
+			margin: auto;
 		}
-		#content div:nth-child(even){
-			background: #777;
-			padding: 30px;
-		}
+		
 
 	</style>
 </head>
 <body>
 
-	<div id="content">
+	<div class="parent">
 
-		<div class="one">1</div>
-		<div class="two">2</div>
-		<div class="three">3</div>
-		<div class="four">4</div>
-		<div class="five">5</div>
-		<div class="six">6</div>
+		<div class="child"></div>
 
 	</div>
 
